@@ -2,4 +2,4 @@
 
 The last day on earth
 
-OLA ._.
+OLA (._.)
