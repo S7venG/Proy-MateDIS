@@ -36,4 +36,4 @@ Git commands:
 # Flujo del Proyecto
 
 
-<img src="./frontend/public/Flujo%20Proy.png" alt="Logo" width="700" />
+<img src="./frontend/public/Flujo%20Proy.png" alt="Logo" width="400" />
