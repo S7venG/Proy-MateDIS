@@ -1,5 +1,7 @@
 "# Proy-MateDIS" 
 
+Si no dominas los comandos de la terminal, instalen Github Copilot en extensiones, y con "Ctrl+I" pueden usarlo como una IA para resolver sus dudas
+
 Git commands:
 
 1) git status:
