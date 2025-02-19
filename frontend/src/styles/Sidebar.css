@@ -1,0 +1,39 @@
+.container {
+    position: relative;
+  }
+  
+  .open-btn {
+    margin: 10px;
+    padding: 10px;
+    background-color: #3c8693;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 60px;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100%;
+    background: #25555d;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .close-btn {
+    background: #25555d;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+  }
+  
