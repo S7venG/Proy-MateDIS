@@ -50,6 +50,7 @@
   color: white;
   margin: 15px;
   border: none;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 30px;
   font-weight: bold;
@@ -68,4 +69,27 @@
   display: inline-block;
   text-decoration: none;
   padding: 15px 0px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  transform: scale(1.1); /* Hace que el botón crezca ligeramente */
+  background-color: rgba(255, 255, 255, 0.2); /* Cambia el fondo al pasar el cursor */
+}
+
+.nav-button .icon {
+  transition: transform 0.3s ease;
+}
+
+.nav-button:hover .icon {
+  transform: rotate(10deg); /* Hace que el icono gire ligeramente */
 }

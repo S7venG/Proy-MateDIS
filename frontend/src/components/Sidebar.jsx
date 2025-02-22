@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom"
+import { Home,Map,Info } from "lucide-react";
 import "../styles/Sidebar.css";
 
 const Sidebar = () => {
@@ -17,15 +18,15 @@ const Sidebar = () => {
         <ul>
           <li>
             <Link to="/" className="nav-button Home_btn" onClick={() => setIsOpen(false)}>
-              Inicio
+              <Home className="icon" /> Inicio
             </Link>
           </li>
           <li>
             <Link to="/map" className="nav-button Map_btn" onClick={() => setIsOpen(false)}>
-              Mapa
+              <Map className="icon" /> Mapa
             </Link>
           </li>
-            Contactos
+            <Info className="icon" /> Contactos
         </ul>
       </div>
     </div>
