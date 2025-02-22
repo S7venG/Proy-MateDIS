@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"
 import "../styles/Sidebar.css";
 
 const Sidebar = () => {
@@ -14,9 +15,17 @@ const Sidebar = () => {
         </button>
         <h2>Menú</h2>
         <ul>
-          <li>Inicio</li>
-          <li>Mapa</li>
-          <li>Contactos</li>
+          <li>
+            <Link to="/" className="nav-button Home_btn" onClick={() => setIsOpen(false)}>
+              Inicio
+            </Link>
+          </li>
+          <li>
+            <Link to="/map" className="nav-button Map_btn" onClick={() => setIsOpen(false)}>
+              Mapa
+            </Link>
+          </li>
+            Contactos
         </ul>
       </div>
     </div>
