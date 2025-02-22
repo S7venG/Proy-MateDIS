@@ -99,6 +99,7 @@
 
 .nav-button:hover {
   transform: scale(1.1); /* Hace que el botón crezca ligeramente */
+  transform: translateX(10px); /* Mueve el texto e icono 10px a la derecha */
   background-color: rgba(255, 255, 255, 0.2); /* Cambia el fondo al pasar el cursor */
 }
 

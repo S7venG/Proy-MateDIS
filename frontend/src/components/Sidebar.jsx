@@ -26,8 +26,12 @@ const Sidebar = () => {
               <Map className="icon" /> Mapa
             </Link>
           </li>
-          <li style={{ marginTop: "400px" }}>
+          <li style={{ marginTop: "350px", fontSize: "25px" }}>
             <Info className="icon" /> Contactos
+            <br /><span style={{ fontSize: "18px", marginLeft: "20px" }}>Policia: 911</span>
+            <br /><span style={{ fontSize: "18px", marginLeft: "20px"  }}>Bomberos: 100</span>
+            <br /><span style={{ fontSize: "18px", marginLeft: "20px"  }}>Ambulancia: 107</span>
+            <br /><span style={{ fontSize: "18px", marginLeft: "20px"  }}>Defensa Civil: 103</span>
           </li>
         </ul>
       </div>
