@@ -10,6 +10,15 @@
   border: none;
   cursor: pointer;
   font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 10px;
+}
+
+.open-btn:hover {
+  transform: scale(1.1);
+  background-color: #25555d;
 }
 
 .sidebar {
@@ -34,7 +43,14 @@
   padding: 10px;
   cursor: pointer;
   color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
   font-size: 40px;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  background-color: #25555d;
 }
 
 .sidebar h2 {
@@ -57,7 +73,7 @@
 }
 
 .sidebar ul {
-  list-style-type: square;
+  list-style-type: none;
   list-style-position: inside;
   margin-top: 30px;
   padding: 0;

@@ -26,7 +26,9 @@ const Sidebar = () => {
               <Map className="icon" /> Mapa
             </Link>
           </li>
+          <li style={{ marginTop: "400px" }}>
             <Info className="icon" /> Contactos
+          </li>
         </ul>
       </div>
     </div>
