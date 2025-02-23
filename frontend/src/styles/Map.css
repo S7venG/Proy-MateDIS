@@ -1,0 +1,9 @@
+.map-container {
+    position: relative;
+}
+
+.map {
+    height: 800px;
+    width: 100%;
+    z-index: 5;
+}
