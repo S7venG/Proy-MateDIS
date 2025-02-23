@@ -1,9 +1,50 @@
 .map-container {
     position: relative;
-}
+    width: 100%;
+    height: 100vh;
+  }
 
 .map {
     height: 800px;
     width: 100%;
     z-index: 5;
 }
+
+.fixed-button {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 20px;
+    background-color: rgba(255, 255, 255, 0.66);
+    border: 5px solid rgba(55, 246, 243, 0.7);
+    border-radius: 40px;
+    color: rgba(105, 105, 105, 0.802); /* Color de letras */
+    cursor: pointer;
+    text-align: left;
+    z-index: 10;
+    width: 350px;
+    font-size: 19px;
+  }
+  
+  .fixed-button .options {
+    position: absolute;
+    bottom: 115%; /* Aumenta el espacio entre el botón original y los botones emergentes */
+    left: 2%; /* Alinea los botones emergentes a la izquierda */
+    transform: translateX(0%); /* Elimina la traslación horizontal */
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+  
+  .option-button {
+    background-color: #007580;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 240px; /* Ajusta el ancho de los botones emergentes */
+    text-align: center;
+    font-size: 17px;
+  }
