@@ -15,6 +15,7 @@ const Map = () => {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
+          console.log("Current position:", latitude, longitude); // Agrega este log para verificar las coordenadas
           setUserPosition([latitude, longitude]);
           const map = mapRef.current;
           if (map != null) {
