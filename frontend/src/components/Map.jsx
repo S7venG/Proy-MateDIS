@@ -8,6 +8,8 @@ const Map = () => {
   const [showOptions, setShowOptions] = useState(false);
   const [userPosition, setUserPosition] = useState(null);
   const [selectMode, setSelectMode] = useState(false);
+  const [buttonText, setButtonText] = useState("Seleccione su ubicación");
+  const [isEditing, setIsEditing] = useState(false);
   const mapRef = useRef();
 
   const handleRealTimeLocation = () => {
@@ -43,6 +45,40 @@ const Map = () => {
     setSelectMode(true);
   };
 
+  const handleDoubleClick = () => {
+    setIsEditing(true);
+    setButtonText(""); // Borra el texto del botón
+  };
+
+  const handleBlur = () => {
+    setIsEditing(false);
+    updatePositionFromText();
+  };
+
+  const handleChange = (e) => {
+    setButtonText(e.target.value);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      updatePositionFromText();
+      setIsEditing(false);
+    }
+  };
+
+  const updatePositionFromText = () => {
+    const coords = buttonText.split(",").map(coord => parseFloat(coord.trim()));
+    if (coords.length === 2 && !isNaN(coords[0]) && !isNaN(coords[1])) {
+      setUserPosition(coords);
+      const map = mapRef.current;
+      if (map != null) {
+        map.setView(coords, 17); // Ajusta el centro y el zoom a la nueva ubicación
+      }
+    } else {
+      setButtonText("Seleccione su ubicación"); // Restablece el texto del botón si las coordenadas no son válidas
+    }
+  };
+
   const MapEvents = () => {
     useMapEvents({
       dblclick(e) {
@@ -73,8 +109,21 @@ const Map = () => {
           className="fixed-button"
           onMouseEnter={() => setShowOptions(true)}
           onMouseLeave={() => setShowOptions(false)}
+          onDoubleClick={handleDoubleClick}
         >
-          Seleccione su ubicación
+          {isEditing ? (
+            <input
+              type="text"
+              value={buttonText}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              onKeyDown={handleKeyDown}
+              autoFocus
+              className="transparent-input"
+            />
+          ) : (
+            buttonText
+          )}
           {showOptions && (
             <div className="options">
               <button className="option-button" onClick={handleMapClick}>
