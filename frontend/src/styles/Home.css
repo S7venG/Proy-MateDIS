@@ -10,6 +10,8 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 1;
+    margin-top: 100px;
+    overflow: hidden; /* Asegura que el contenido adicional no se desborde */
   }
 
   .home-container h1 {

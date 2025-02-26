@@ -26,7 +26,7 @@ const Sidebar = () => {
         <button className="close-btn" onClick={() => setIsOpen(false)}>
           X
         </button>
-        <h2>Menú</h2>
+        <h2>GeoSalud</h2>
         <ul>
           <li>
             <Link to="/" className="nav-button Home_btn" onClick={() => setIsOpen(false)}>
