@@ -1,12 +1,12 @@
 import requests
 
 # Tu clave de API de Google Maps
-api_key = 'TU_CLAVE_DE_API'
+api_key = 'AIzaSyAVOh6ZXRiPCr0HpSAm0myYvsLD1oIWBTk'
 
 # Coordenadas de tu ubicación (ejemplo: latitud y longitud de un lugar)
-origen = 'latitud,longitud'  # Ejemplo: 40.712776,-74.005974 (Nueva York)
+origen = '-12.0432,-77.0282'  # Ejemplo: 40.712776,-74.005974 (Nueva York)
 # Coordenadas del destino (ejemplo: latitud y longitud del destino)
-destino = 'latitud,longitud'  # Ejemplo: 34.052235,-118.243683 (Los Ángeles)
+destino = '12.113684398961848,-77.00136655386892'  # Ejemplo: 34.052235,-118.243683 (Los Ángeles)
 
 # URL de la API de Directions
 url = f"https://maps.googleapis.com/maps/api/directions/json?origin={origen}&destination={destino}&key={api_key}"
