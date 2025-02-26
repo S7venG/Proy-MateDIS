@@ -1,6 +1,6 @@
-/* Contenedor del mapa */
+/* Contenedor principal del mapa */
 .map-container {
-  position: relative; /* Ajustado para evitar conflictos con Google Maps */
+  position: relative;
   width: 100%;
   height: 100vh;
 }
@@ -11,7 +11,7 @@
   height: 100%;
 }
 
-/* Contenedor de botones */
+/* Contenedor de botones flotantes */
 .button-container {
   position: fixed;
   bottom: 50px;
@@ -20,50 +20,64 @@
   display: flex;
   align-items: center;
   z-index: 1000; /* Asegura que los botones estén sobre el mapa */
+  gap: 10px; /* Espaciado entre los botones */
 }
 
-/* Botón circular para centrar el mapa */
+/* Botón circular flotante */
 .circular-button {
   background-color: #007580;
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
   cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .circular-button img {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
+}
+
+.circular-button:hover {
+  background-color: #005b5e;
+  transform: scale(1.1); /* Pequeña animación al pasar el mouse */
 }
 
 /* Botón de selección de ubicación */
 .fixed-button {
-  padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.8);
+  padding: 12px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
   border: 3px solid rgba(55, 246, 243, 0.7);
   border-radius: 40px;
   color: rgba(105, 105, 105, 0.8);
   cursor: pointer;
-  text-align: left;
+  text-align: center;
   width: 350px;
   font-size: 19px;
   position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
 }
 
-/* Contenedor de las opciones emergentes */
+.fixed-button:hover {
+  background-color: rgba(230, 230, 230, 0.9);
+}
+
+/* Contenedor de opciones emergentes */
 .fixed-button .options {
   position: absolute;
   bottom: 110%;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 10px;
   padding: 5px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -96,7 +110,6 @@
   padding: 13px 20px;
   cursor: pointer;
   font-size: 18px;
-  margin-left: 10px;
   transition: background 0.3s ease;
 }
 
